@@ -517,24 +517,58 @@ img {
   color: white;
 }
 
-/* Recruiting banner */
-.recruiting-banner {
-  text-align: center;
-  padding: 2.5rem;
-  border: 2px dashed var(--primary);
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 230px);
+  gap: 1.5rem;
+}
+
+.student-card {
+  overflow: hidden;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
   border-radius: 10px;
-  background: rgba(140, 0, 42, 0.03);
 }
 
-.recruiting-banner h3 {
+.student-photo {
+  display: block;
+  width: 180px;
+  height: 220px;
+  margin: 1.5rem auto 0;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.student-info {
+  width: 180px;
+  margin: 0 auto;
+  padding: 1.25rem 0;
+}
+
+.student-info h3 {
   color: var(--primary);
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
 }
 
-.recruiting-banner p {
+.student-course {
   color: var(--text-light);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.student-research {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.student-research span {
+  display: block;
+  color: var(--secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 /* ========================================
@@ -766,8 +800,16 @@ img {
     text-align: center;
   }
 
+  .faculty-info > p:not(.title) {
+    text-align: justify;
+  }
+
   .faculty-links {
     justify-content: center;
+  }
+
+  .student-info .faculty-links {
+    justify-content: flex-start;
   }
 
   .contact-grid {
